@@ -15,6 +15,8 @@ class ArticleResource extends JsonResource
             'slug' => $this->slug,
             'image' => $this->image,
             'content' => $this->content,
+            'is_recommend' => (boolean)$this->is_recommend,
+            'is_published' => (boolean)$this->is_published,
             'created_at' => (string)$this->created_at,
             'updated_at' => (string)$this->updated_at,
             'categories' => CategoryResource::collection($this->whenLoaded('categories')),

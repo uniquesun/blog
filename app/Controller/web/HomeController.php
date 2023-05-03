@@ -6,6 +6,7 @@ use App\Controller\AbstractController;
 
 use App\Model\Article;
 use App\Model\Category;
+use App\Service\ArticleService;
 use Hyperf\HttpServer\Annotation\Controller;
 use Hyperf\HttpServer\Annotation\RequestMapping;
 use Hyperf\View\RenderInterface;
@@ -18,16 +19,10 @@ class HomeController extends AbstractController
     protected int $random_articles_limit = 6;
 
     #[RequestMapping(path: '/', methods: 'get')]
-    public function index()
+    public function index(ArticleService $articleService)
     {
-        $recommend_articles = Article::query(true)
-            ->orderBy('is_recommend', 'desc')
-            ->orderBy('id')
-            ->limit($this->recommend_articles_limit)->get();
-        $random_articles = Article::query()
-            ->orderByRaw("RAND()")
-            ->limit($this->random_articles_limit)
-            ->get();
+        $recommend_articles = $articleService->recommend($this->recommend_articles_limit);
+        $random_articles = $articleService->random($this->random_articles_limit);
         return view('home', compact('recommend_articles', 'random_articles'));
     }
 

@@ -28,13 +28,11 @@ class AdminUserController extends AbstractController
     public function update(RequestInterface $request)
     {
         $user = auth('admin')->user();
+
         $data = [];
-        if ($password = $request->input('password')) {
-            $data['password'] = Hash::make($password);
-        }
-        if ($avatar = $request->input('avatar')) {
-            $data['avatar'] = $avatar;
-        }
+        if ($password = $request->input('password')) $data['password'] = Hash::make($password);
+        if ($avatar = $request->input('avatar')) $data['avatar'] = $avatar;
+
         AdminUser::query()->where('id', $user->id)->update($data);
         return $this->success();
     }

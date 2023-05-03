@@ -16,6 +16,7 @@ class CategoryResource extends JsonResource
             'is_directory' => $this->is_directory,
             'level' => $this->level,
             'path' => $this->path,
+            'is_recommend' => (boolean)$this->is_recommend,
             'created_at' => (string)$this->created_at,
             'updated_at' => (string)$this->updated_at
         ];

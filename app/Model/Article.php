@@ -5,6 +5,8 @@ declare (strict_types=1);
 namespace App\Model;
 
 
+use App\Model\Builder\ArticleBuilder;
+
 /**
  * @property int $id
  * @property string $subtitle
@@ -17,10 +19,16 @@ namespace App\Model;
  */
 class Article extends Model
 {
+    use ArticleBuilder;
 
     protected $table = 'article';
 
     protected $guarded = [];
+
+    protected $casts = [
+        'is_published' => 'boolean',
+        'is_recommend' => 'boolean'
+    ];
 
     public function tags(): \Hyperf\Database\Model\Relations\BelongsToMany
     {
@@ -31,5 +39,6 @@ class Article extends Model
     {
         return $this->belongsToMany(Category::class, 'article_category', 'article_id', 'category_id');
     }
+
 
 }
