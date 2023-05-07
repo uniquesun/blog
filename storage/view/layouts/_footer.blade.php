@@ -10,28 +10,27 @@
             <div class="col-12 col-md-3 mt-3">
                 <h6 class="fw-bold">作品</h6>
                 <ul>
-                    <li><a href="#" class="text-black-50">olaf.com</a></li>
+                    <li><a href="https://olaf.fun" class="text-black-50">olaf.fun</a></li>
                 </ul>
             </div>
             <div class="col-12 col-md-3 mt-3">
                 <h6 class="fw-bold">联系我</h6>
                 <ul>
-                    <li><a href="#" class="text-black-50">Github</a></li>
-                    <li><a href="#" class="text-black-50">Email</a></li>
-                    <li><a href="#" class="text-black-50">Telegram</a></li>
+                    <li><a href="https://github.com/uniquesun" target="_blank" class="text-black-50">Github</a></li>
+                    <li><a href="olaflongjie@gmail.com" target="_blank" class="text-black-50">Email</a></li>
                 </ul>
             </div>
             <div class="col-12 col-md-3 mt-3">
                 <h6 class="fw-bold">友链</h6>
                 <ul>
-                    <li><a href="#" class="text-black-50">learnku</a></li>
+                    <li><a href="https://learnku.com/" target="_blank" class="text-black-50">learnku</a></li>
                 </ul>
             </div>
         </div>
     </div>
 
     <div class="text-center pt-3 pb-4 fs-7 text-black-50">
-        <span class="pe-3">© 2023 olaf.com olaf-blog</span>
+        <span class="pe-3">© 2023 olaf.fun olaf-blog</span>
         <span>由 olaf 手工设计和编码 <span class="red"> ❤ </span></span>
     </div>
 

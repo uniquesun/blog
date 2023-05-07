@@ -38,12 +38,16 @@ class ArticleRepository extends Repository
                 });
             })
             ->orderBy('id', 'desc')
-            ->paginate(10);
+            ->paginate($data['page_size'], ['*'], 'page', $data['page']);
     }
 
-    public function findWithRelationship($id): \Hyperf\Database\Model\Collection|\Hyperf\Database\Model\Model|array|\Hyperf\Database\Model\Builder|Article|null
+    public function findWithRelationship($slug): \Hyperf\Database\Model\Collection|\Hyperf\Database\Model\Model|array|\Hyperf\Database\Model\Builder|Article|null
     {
-        return $this->model::query(true)->with(['tags', 'categories'])->find($id);
+        if (is_string($slug)) {
+            return $this->model::query(true)
+                ->with(['tags', 'categories'])->where('slug', $slug)->first();
+        }
+        return $this->model::query(true)->with(['tags', 'categories'])->find($slug);
     }
 
     public function random($limit)

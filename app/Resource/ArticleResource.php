@@ -17,8 +17,8 @@ class ArticleResource extends JsonResource
             'content' => $this->content,
             'is_recommend' => (boolean)$this->is_recommend,
             'is_published' => (boolean)$this->is_published,
-            'created_at' => (string)$this->created_at,
-            'updated_at' => (string)$this->updated_at,
+            'created_at' => substr((string)$this->created_at, 0, 10),
+            'updated_at' => substr((string)$this->updated_at,0,10),
             'categories' => CategoryResource::collection($this->whenLoaded('categories')),
             'tags' => TagResource::collection($this->whenLoaded('tags'))
         ];

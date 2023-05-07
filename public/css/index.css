@@ -22,11 +22,6 @@ a {
     text-decoration: none;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
 
 .article-title {
     color: #1d1d1f;
@@ -39,15 +34,3 @@ ul {
 .read-more:hover {
     color: #ffffff !important;
 }
-
-.article-image {
-    /*flex-basis: 600px;*/
-    /*overflow: hidden;*/
-    /*position: relative;*/
-}
-
-/*.article-image img:hover {*/
-/*    opacity: 1;*/
-/*    transform: none;*/
-/*    transition: transform .4s cubic-bezier(.4,0,.25,1) 0ms,opacity 1s cubic-bezier(.4,0,.25,1) 0ms;*/
-/*}*/

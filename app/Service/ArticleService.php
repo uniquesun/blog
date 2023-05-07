@@ -39,9 +39,11 @@ class ArticleService
     public function webPaginate(RequestInterface $request)
     {
         $category_name = $request->route('name', '');
+        $page = $request->input('page', 1);
+        $page_size = $request->input('page_size', 20);
 
         return $this->articleRepository->getWebPaginate(compact(
-            'category_name'
+            'page', 'page_size', 'category_name'
         ));
     }
 
@@ -57,7 +59,7 @@ class ArticleService
         $article = $this->articleRepository->store([
             'subtitle' => $request->input('subtitle'),
             'title' => $request->input('title'),
-            'slug' => str_replace(' ', '-', $request->input('slug')),
+            'slug' => strtolower(str_replace(' ', '-', $request->input('slug'))),
             'image' => $request->input('image'),
             'content' => $request->input('content'),
             'is_published' => $request->input('is_published', false),
@@ -93,7 +95,7 @@ class ArticleService
         $this->articleRepository->update($id, [
             'subtitle' => $request->input('subtitle', $article->subtitle),
             'title' => $request->input('title', $article->title),
-            'slug' => str_replace(' ', '-', $request->input('slug', $article->title)),
+            'slug' => strtolower(str_replace(' ', '-', $request->input('slug', $article->title))),
             'image' => $request->input('image', $article->image),
             'content' => $request->input('content', $article->content),
             'is_published' => $request->input('is_published', $article->is_published),

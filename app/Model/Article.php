@@ -25,6 +25,11 @@ class Article extends Model
 
     protected $guarded = [];
 
+    protected function getCreatedAtAttribute($value)
+    {
+        return substr($value, 0, 10);
+    }
+
     protected $casts = [
         'is_published' => 'boolean',
         'is_recommend' => 'boolean'

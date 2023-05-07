@@ -1,5 +1,4 @@
 @extends('layouts.app')
-@section('title','主页')
 
 @section('content')
     <!--推荐文章-->
@@ -9,11 +8,11 @@
             @foreach($recommend_articles as $index =>  $recommend_article)
                 <div class="row mx-1 justify-content-center">
                     <div class="col-12 col-md-11 article-item bg-white shadow-sm rounded-4 mb-4 px-0">
-                        <a href="{{ "/article/".$recommend_article->id }}" class="d-flex flex-md-row flex-column">
+                        <a href="{{ "/article/".$recommend_article->slug }}" class="d-flex flex-md-row flex-column">
                             <div class="article-image h-auto w-100">
                                 <img class="object-fit-cover w-100 h-100 rounded-4 lozad"
                                      data-src="{{ $recommend_article->image }}"
-                                     alt="">
+                                     style="height: 260px!important;">
                             </div>
                             <div class="article-content text-black p-4 p-md-5 d-flex flex-column justify-content-between">
                                 <div class="article-head">
@@ -21,7 +20,7 @@
                                     <div class="article-title fw-bolder fs-3">{{ $recommend_article->title }}
                                     </div>
                                 </div>
-                                <div class="article-time text-black-50 fs-7 fw-semi-bold mt-3">{{ $recommend_article->updated_at }}
+                                <div class="article-time text-black-50 fs-7 fw-semi-bold mt-3">{{ $recommend_article->created_at }}
                                 </div>
                             </div>
                         </a>
@@ -35,11 +34,12 @@
                     @if($index > 0)
                         @if($index ==1 || $index == 2)
                             <div class="col-12 col-md-5 col-lg-5 article-item bg-white shadow-sm rounded-4 my-4 px-0">
-                                <a href="{{ "/article/".$recommend_article->id }}" class="d-flex flex-column">
+                                <a href="{{ "/article/".$recommend_article->slug }}" class="d-flex flex-column">
                                     <div class="article-image h-auto">
                                         <img class="object-fit-cover w-100 h-100 rounded-top-4 lozad"
+                                             style="height: 220px!important;"
                                              data-src="{{ $recommend_article->image }}"
-                                             alt="" style="max-height: 250px !important;">
+                                             alt="">
                                     </div>
                                     <div class="article-content text-black p-3 p-md-3 d-flex flex-column justify-content-between">
                                         <div class="article-head">
@@ -54,11 +54,12 @@
                             </div>
                         @else
                             <div class="col-12 col-md-5 col-lg-3 article-item bg-white shadow-sm rounded-4 my-4 px-0 me-1">
-                                <a href="{{ "/article/".$recommend_article->id }}" class="d-flex flex-column">
+                                <a href="{{ "/article/".$recommend_article->slug }}" class="d-flex flex-column">
                                     <div class="article-image h-auto">
                                         <img class="object-fit-cover w-100 h-100 rounded-top-4 lozad"
+                                             style="height: 200px!important;"
                                              data-src="{{ $recommend_article->image }}"
-                                             alt="" style="max-height: 250px !important;">
+                                             alt="">
                                     </div>
                                     <div class="article-content text-black p-3 p-md-3 d-flex flex-column justify-content-between">
                                         <div class="article-head">
@@ -85,8 +86,9 @@
             <div class="row mx-1">
                 @foreach($random_articles as $random_article)
                     <div class="col-12 col-md-6 article-item py-4 border-bottom border-secondary-subtle">
-                        <a href="{{ "/article/".$random_article->id }}" class="d-flex ">
-                            <div class="article-image h-auto w-50">
+                        <a href="{{ "/article/".$random_article->slug }}" class="d-flex ">
+                            <div class="article-image h-auto w-50"
+                                 style="max-height: 150px!important;max-width: 200px!important;">
                                 <img class="object-fit-cover w-100 h-100 rounded-4 lozad"
                                      data-src="{{ $random_article->image }}"
                                      alt="">
