@@ -1,3 +1,7 @@
 .hljs {
     padding: 10px !important;
 }
+
+.title-content img{
+    max-width: 100%;
+}

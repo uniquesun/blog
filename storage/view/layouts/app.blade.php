@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title', '分享个人经验与生活') - olaf blog</title>
+    <title>@yield('title', '分享个人的知识学习，工作经验，生活感悟') - olaf blog</title>
     <meta name="description" content="高品质的关于 Laravel,JavaScript,Golang 个人博客。" />
     <meta name="keywords" content="olaf,laravel,laravel blog,php blog,JavaScript blog,laravel教程,laravel开源,laravel新手,laravel5" />
     <meta name="author" content="Olaf" />

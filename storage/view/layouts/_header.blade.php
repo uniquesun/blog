@@ -4,7 +4,7 @@
              style="opacity: 0.8;backdrop-filter: saturate(180%) blur(20px);background: #ffffff">
             <div class="container-fluid align-items-center">
                 <a class="d-block navbar-brand" href="/" title="olaf blog" style="height: 40px">
-                    <img src="/images/logo.jpg" alt="olaf" class="img-fluid w-100 h-100 rounded-5">
+                    <img src="/images/logo.jpg" alt="olaf" class="img-fluid object-fit-cover h-100 rounded-5">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -20,7 +20,7 @@
                             </li>
                         @endforeach
                         <li class="nav-item">
-                            <a class="nav-link text-secondary-emphasis" href="/about">about</a>
+                            <a class="nav-link text-secondary-emphasis" href="/about">About</a>
                         </li>
                     </ul>
                 </div>

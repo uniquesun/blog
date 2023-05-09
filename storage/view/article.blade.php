@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="/css/article.css">
 @section('content')
     <!--文章详情-->
-    <section class="mh-100 h-100 mt-3 mb-5">
+    <section class="min-vh-100 mt-3 mb-5">
         <div class="container py-2">
             <div class="bg-white mx-auto p-4" style="max-width: 860px">
                 <div class="article-title text-center">
@@ -25,7 +25,7 @@
                     <hr>
                 </div>
 
-                <div class="title-content" id="article-content">
+                <div class="title-content" id="article-content" style="display: none">
                     {{ $article->content }}
                 </div>
 
@@ -68,6 +68,8 @@
                 .replaceAll('&comma;', '\,')
                 .replaceAll('&lsquo;', '\&')
         )
+
+        article_content.style.display = "block";
     }
 
 

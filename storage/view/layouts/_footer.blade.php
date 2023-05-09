@@ -9,22 +9,16 @@
             </div>
             <div class="col-12 col-md-3 mt-3">
                 <h6 class="fw-bold">作品</h6>
-                <ul>
-                    <li><a href="https://olaf.fun" class="text-black-50">olaf.fun</a></li>
-                </ul>
+                <p class="pb-0"><a href="https://olaf.fun" class="text-black-50">olaf.fun</a></p>
             </div>
             <div class="col-12 col-md-3 mt-3">
                 <h6 class="fw-bold">联系我</h6>
-                <ul>
-                    <li><a href="https://github.com/uniquesun" target="_blank" class="text-black-50">Github</a></li>
-                    <li><a href="olaflongjie@gmail.com" target="_blank" class="text-black-50">Email</a></li>
-                </ul>
+                <p class="pb-0"><a href="https://github.com/uniquesun" target="_blank" class="text-black-50">Github</a></p>
+                <p class="pb-0"><a href="olaflongjie@gmail.com" target="_blank" class="text-black-50">Email</a></p>
             </div>
             <div class="col-12 col-md-3 mt-3">
                 <h6 class="fw-bold">友链</h6>
-                <ul>
-                    <li><a href="https://learnku.com/" target="_blank" class="text-black-50">learnku</a></li>
-                </ul>
+                <p class="pb-0"><a href="https://learnku.com/" target="_blank" class="text-black-50">learnku</a></p>
             </div>
         </div>
     </div>
