@@ -1,21 +1,11 @@
-# blog
+# 博客
+ 基于 hyperf 开发的博客
 
-```shell
-# adminUser
-id name password ...
+# 预览
+https://olaf.fun/
 
-# category
-id  name image  parent_id is_directory level path
-
-# tag
-id  name
-
-# article 
-id subtitle title slug image content created_at 
-id articel_id  category_id
-id articel_id  tag_id
-
-# comment
-id articel_id content name email created_at
-
+# 使用方法
+```bash
+# 运行迁移
+php bin/hyperf.php migrate
 ```
